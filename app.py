@@ -32,7 +32,7 @@ if st.button("predict"):
     vector_input = tfid.transform([transformed_sms])
     result = model.predict(vector_input)[0]
     print(result)
-    if result == 1:
+    if result:
         st.header("Sapm")
     else:
         st.header("Not Spam")
